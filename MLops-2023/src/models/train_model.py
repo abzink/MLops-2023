@@ -39,6 +39,7 @@ def main(config):
             running_loss += loss.item()
 
         train_losses.append(running_loss / n_total_steps)
+
     torch.save(model, "models/model.pth")
     plt.plot(train_losses)
     plt.xlabel("step")

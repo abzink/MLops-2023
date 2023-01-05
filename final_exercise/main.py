@@ -1,17 +1,16 @@
 import argparse
 import sys
 
-import torch
 import click
+import matplotlib.pyplot as plt
+import torch
+import torch.nn.functional as F
+from torch import nn, optim
+from torch.utils.data import DataLoader
 
 from data import mnist
 from model import MyAwesomeModel
 
-from torch import nn, optim
-import torch.nn.functional as F
-
-from torch.utils.data import DataLoader
-import matplotlib.pyplot as plt
 
 @click.group()
 def cli():

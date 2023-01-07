@@ -1,4 +1,0 @@
-epochs : 10
-train_data: 'data/processed/train.pt'
-seed: 42
-lr : 0.001

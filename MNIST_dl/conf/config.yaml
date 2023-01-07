@@ -1,3 +1,0 @@
-defaults:
-  - model: model_conf
-  - training: training_conf

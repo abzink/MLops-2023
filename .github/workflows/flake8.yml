@@ -1,10 +1,10 @@
-name: "Run isort"
+name: "Run flake8"
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master, main ]
   pull_request:
-    branches: [ main ]
+    branches: [ master, main ]
 
 jobs:
   build:
@@ -12,6 +12,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-20.04, macOS-10.15, windows-2019]
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -29,5 +30,5 @@ jobs:
         pip install -r requirements_tests.txt
     - name: Sort code
       run: |
-        pip install isort
-        isort --recursive .
+        pip install flake8
+        flake8
